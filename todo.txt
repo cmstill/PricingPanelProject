@@ -1,0 +1,2 @@
+There is an issue where the last panel div streches weirdly when I increase the size of the screen.  how can I fix this?
+	- maybe flex shrink?

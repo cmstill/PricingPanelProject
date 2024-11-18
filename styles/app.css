@@ -69,14 +69,28 @@ body {
 	border-radius: 1em;
 	display: flex;
 	flex-direction: column;
-	
+	height: 100%;
+	text-align: center;
+	width: 100%; 
+  min-height: 100vh; 
 } 
 
+#container .panel {
+	border: 1px solid;
+	border-color: transparent transparent #e1f1ff transparent;
+	padding: 1em;
+}
+
+#container .panel:nth-of-type(3) {
+	border-right: transparent;
+}
 
 .panel-header {
 	color: #888;
 	font-weight: 600;
 	letter-spacing: 1px;
+	margin-top: 1.5em;
+	margin-bottom: 3em;
 }
 
 @media (min-width:901px) {
@@ -86,5 +100,10 @@ body {
 	}
 	#container {
 		flex-direction: row;
+		min-height: auto;
+	}
+
+	#container .panel {
+		border-color: transparent #e1f1ff transparent transparent;
 	}
 }
