@@ -49,10 +49,42 @@ table {
 
 /*  this is where the actual stylesheet starts */
 
+html {
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
 body {
 	background-color: #60a9ff;
+	text-transform: uppercase;
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
 }
 
 #container {
-	background-color: 
+	background-color: white;
+	border-radius: 1em;
+	display: flex;
+	flex-direction: column;
+	
+} 
+
+
+.panel-header {
+	color: #888;
+	font-weight: 600;
+	letter-spacing: 1px;
+}
+
+@media (min-width:901px) {
+	body {
+		flex-direction: row;
+		align-items: center;
+	}
+	#container {
+		flex-direction: row;
+	}
 }
