@@ -93,6 +93,10 @@ body {
 	margin-bottom: 3em;
 }
 
+ul li {
+	color: #016ff9;
+}
+
 @media (min-width:901px) {
 	body {
 		flex-direction: row;
