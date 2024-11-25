@@ -56,58 +56,87 @@ html {
 
 body {
 	background-color: #60a9ff;
-	text-transform: uppercase;
-	display:flex;
-	flex-direction: column;
+	display: flex;
 	justify-content: center;
 	align-items: center;
 	min-height: 100vh;
 }
 
-#container {
+.panel {
 	background-color: white;
-	border-radius: 1em;
+	border-radius: 10px;
+	padding: 15px 25px;
+	width: 100%;
+	max-width: 960px; /* okay this is what prevents the like stretching problem I had.  You set width to 100% and then set the max width to say how much you want it to take up in width at maximum */
 	display: flex;
 	flex-direction: column;
-	height: 100%;
 	text-align: center;
-	width: 100%; 
-  min-height: 100vh; 
-} 
-
-#container .panel {
-	border: 1px solid;
-	border-color: transparent transparent #e1f1ff transparent;
-	padding: 1em;
+	color: #60a9ff;
+	text-transform: uppercase;
 }
 
-#container .panel:nth-of-type(3) {
-	border-right: transparent;
-}
-
-.panel-header {
-	color: #888;
-	font-weight: 600;
-	letter-spacing: 1px;
-	margin-top: 1.5em;
-	margin-bottom: 3em;
-}
-
-ul li {
+.pricing-plan {
 	color: #016ff9;
 }
 
-@media (min-width:901px) {
-	body {
-		flex-direction: row;
-		align-items: center;
-	}
-	#container {
-		flex-direction: row;
-		min-height: auto;
-	}
+.pricing-features {
+	margin-bottom: 35px;
+}
 
-	#container .panel {
-		border-color: transparent #e1f1ff transparent transparent;
-	}
+.pricing-header {
+	margin-bottom: 35px;
+	color: #888;
+	font-weight: 620;
+	letter-spacing: 1px;
+	font-size: 1.2em;
+}
+
+.pricing-price {
+	font-size: 1.9em;
+	font-weight: 700;
+}
+
+.list-item {
+	border: 1px solid #e1f1ff;
+	border-left: 0;
+	border-right: 0;
+	padding: 15px 0;
+	font-size: .8em;
+	font-weight: 540;
+}
+
+.list-item:first-of-type {
+	border-bottom: 0;
+}
+
+.panel-image {
+	margin-bottom: 25px;
+	max-width: 100%; /* okay this one is huge...this is what sets the image to have a max-width of 100% of the the parent containter, in this case the .panel above.  So that means if the image is naturally larger than the container it will overflow as the containter resizes...but not if I set its max width to always be 100% of the parent container */
+}
+
+.pricing-plan {
+	border-bottom: 1px solid #e1f1ff;
+}
+
+.pricing-plan:last-child {
+	border-bottom: none;
+}
+
+button {
+	display: block;
+	margin: 20px auto;
+	font-size: 25px;
+	padding: 15px 30px;
+	border: 1px solid #9dd1ff;
+	border-radius: 10px;
+	background-color: white;
+	color: #9dd1ff;
+	font-weight: 100;
+	font-size: 1em;
+	text-transform: uppercase;
+}
+
+button:hover{
+	background-color: #9dd1ff;
+	color: white;
 }
