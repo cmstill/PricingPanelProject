@@ -130,13 +130,33 @@ button {
 	border: 1px solid #9dd1ff;
 	border-radius: 10px;
 	background-color: white;
-	color: #9dd1ff;
+	color: #348efe;
 	font-weight: 100;
 	font-size: 1em;
 	text-transform: uppercase;
+	transition: background-color 300ms ease-in-out;
 }
 
-button:hover{
+button:hover, .pricing-button:focus {
 	background-color: #9dd1ff;
 	color: white;
+}
+
+/*  responsiveness w/ media queries */
+
+@media screen and (min-width: 1024px) {
+	.panel {
+		flex-direction: row;
+	}
+
+	.pricing-plan {
+		border-right: 1px solid #e1f1ff;
+		border-bottom: 0;
+		padding: 25px 50px;
+	}
+
+	.pricing-plan:last-child {
+		border-right: 0;
+	}
+
 }
